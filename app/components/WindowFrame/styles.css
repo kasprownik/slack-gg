@@ -1,0 +1,113 @@
+.mainContainer {
+  border: 1px solid #c0c0c0;
+  border-right-color: #000;
+  border-bottom-color: #000;
+  position: absolute;
+  background: #c0c0c0;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.mainInnerContainer {
+  border: 1px solid #fff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  flex: 1;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 18px;
+  background: #000080;
+  padding: 2px;
+  -webkit-app-region: drag;
+  user-select: none;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 4px;
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.title img {
+  max-height: 100%;
+}
+
+.buttons {
+  display: flex;
+}
+
+.button {
+  background: url(./buttons.png);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  height: 14px;
+  width: 16px;
+  -webkit-app-region: no-drag;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.minimizeButton {
+  composes: button;
+  background-position: 0 0;
+}
+
+.maximizeButton {
+  composes: button;
+  background-position: -16px 0;
+}
+
+.closeButton {
+  composes: button;
+  margin-left: 2px;
+  background-position: -33px 0;
+}
+
+.minimizeButton:active {
+  background-position: 0 -43px;
+}
+
+.maximizeButton:active {
+  background-position: -16px -29px;
+}
+
+.closeButton:active {
+  background-position: -33px -14px;
+}
+
+.contentContainer {
+  border: 1px solid #808080;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  flex: 1;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentInnerContainer {
+  border: 1px solid #000;
+  border-right-color: #c0c0c0;
+  border-bottom-color: #c0c0c0;
+  flex: 1;
+  background: #ff8041;
+  padding: 2px;
+}

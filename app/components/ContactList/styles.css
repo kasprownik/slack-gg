@@ -1,0 +1,36 @@
+.container {
+  background: #ffff9c;
+  flex: 1;
+  overflow: auto;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  height: 18px;
+  font-weight: 800;
+  padding: 1px 2px;
+  cursor: default;
+  user-select: none;
+}
+
+.listItem.selected {
+  background: #07216c;
+  color: #fff;
+}
+
+.name {
+  padding-left: 3px;
+}
+
+.contactInfo {
+  display: flex;
+  background: #f7f7d9;
+  padding: 3px;
+  border-top: 1px solid #a0a0a0;
+}
+
+.contactInfo > * {
+  flex: 1;
+}

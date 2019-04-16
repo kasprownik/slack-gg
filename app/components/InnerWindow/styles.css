@@ -1,0 +1,44 @@
+.outerFrame {
+  border: 1px solid #808080;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.outerFrame.raised {
+  border: 1px solid #fff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+}
+
+.outerFrame.fill {
+  flex: 1;
+}
+
+.innerFrame {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-right-color: #c0c0c0;
+  border-bottom-color: #c0c0c0;
+  flex: 1;
+  background: #ff8041;
+  padding: 2px;
+  overflow: auto;
+}
+
+.raised .innerFrame {
+  border: 1px solid #c0c0c0;
+  border-right-color: #000;
+  border-bottom-color: #000;
+}
+
+.innerFrame.compact {
+  padding: 0;
+}
+
+.mergeDown {
+  margin-bottom: -4px;
+}
