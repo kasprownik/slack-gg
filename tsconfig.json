@@ -16,7 +16,8 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": ["vitest/globals"]
   },
   "include": ["src"]
 }
