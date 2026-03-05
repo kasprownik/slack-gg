@@ -22,7 +22,9 @@ export function WindowFrame({
     <div className={styles.mainContainer}>
       <div className={styles.mainInnerContainer}>
         <div className={styles.titleBar} data-tauri-drag-region>
-          <div className={styles.title}>{title}</div>
+          <div className={styles.title} data-tauri-drag-region>
+            {title}
+          </div>
           <div className={styles.buttons}>
             {minimizable && (
               <button
