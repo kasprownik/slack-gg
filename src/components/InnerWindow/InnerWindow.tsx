@@ -9,24 +9,29 @@ interface InnerWindowProps {
   fill?: boolean;
 }
 
-export function InnerWindow({ children, compact, raised, mergeDown, fill }: InnerWindowProps) {
+export function InnerWindow({
+  children,
+  compact,
+  raised,
+  mergeDown,
+  fill,
+}: InnerWindowProps) {
   const outerClassName = [
     styles.outerFrame,
     fill ? styles.fill : '',
     raised ? styles.raised : '',
     mergeDown ? styles.mergeDown : '',
-  ].filter(Boolean).join(' ');
+  ]
+    .filter(Boolean)
+    .join(' ');
 
-  const innerClassName = [
-    styles.innerFrame,
-    compact ? styles.compact : '',
-  ].filter(Boolean).join(' ');
+  const innerClassName = [styles.innerFrame, compact ? styles.compact : '']
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <div className={outerClassName}>
-      <div className={innerClassName}>
-        {children}
-      </div>
+      <div className={innerClassName}>{children}</div>
     </div>
   );
 }

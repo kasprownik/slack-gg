@@ -36,7 +36,9 @@ body {
   border-left: 1px solid #c3c7cb;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-  box-shadow: inset 1px 1px 0 0 white, inset -1px -1px 0 0 #868a8e;
+  box-shadow:
+    inset 1px 1px 0 0 white,
+    inset -1px -1px 0 0 #868a8e;
   width: 16px;
   height: 16px;
   background-color: #c3c7cb;
@@ -63,7 +65,9 @@ body {
   border-left: 1px solid #c3c7cb;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-  box-shadow: inset 1px 1px 0 0 white, inset -1px -1px 0 0 #868a8e;
+  box-shadow:
+    inset 1px 1px 0 0 white,
+    inset -1px -1px 0 0 #868a8e;
   display: block;
   width: 16px;
   height: 16px;

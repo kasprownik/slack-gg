@@ -18,11 +18,5 @@ interface StatusIconProps {
 }
 
 export function StatusIcon({ status }: StatusIconProps) {
-  return (
-    <img
-      src={iconPaths[status]}
-      alt={status}
-      className={styles.status}
-    />
-  );
+  return <img src={iconPaths[status]} alt={status} className={styles.status} />;
 }

@@ -17,23 +17,25 @@ interface ContactListProps {
 export function ContactList({ contacts }: ContactListProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const selectedContact = selectedIndex !== null ? contacts[selectedIndex] : undefined;
+  const selectedContact =
+    selectedIndex !== null ? contacts[selectedIndex] : undefined;
 
   return (
     <InnerWindow compact fill>
       <div className={styles.container}>
         {contacts.map((contact, index) => {
           const isSelected = selectedIndex === index;
-          const className = [
-            styles.listItem,
-            isSelected ? styles.selected : '',
-          ].filter(Boolean).join(' ');
+          const className = [styles.listItem, isSelected ? styles.selected : '']
+            .filter(Boolean)
+            .join(' ');
 
           return (
             <div
-              key={`${contact.id}-${index}`}
+              key={`${contact.id}-${String(index)}`}
               className={className}
-              onClick={() => setSelectedIndex(index)}
+              onClick={() => {
+                setSelectedIndex(index);
+              }}
             >
               <StatusIcon status={contact.status} />
               <div className={styles.name}>{contact.name}</div>
@@ -43,7 +45,8 @@ export function ContactList({ contacts }: ContactListProps) {
       </div>
       <div className={styles.contactInfo}>
         <div>
-          ID {selectedContact !== undefined && <span>{selectedContact.id}</span>}
+          ID{' '}
+          {selectedContact !== undefined && <span>{selectedContact.id}</span>}
         </div>
         <div>tel</div>
       </div>

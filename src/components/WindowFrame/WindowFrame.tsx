@@ -10,7 +10,12 @@ interface WindowFrameProps {
   maximizable?: boolean;
 }
 
-export function WindowFrame({ children, title, minimizable, maximizable }: WindowFrameProps) {
+export function WindowFrame({
+  children,
+  title,
+  minimizable,
+  maximizable,
+}: WindowFrameProps) {
   const appWindow = getCurrentWindow();
 
   return (
@@ -23,7 +28,9 @@ export function WindowFrame({ children, title, minimizable, maximizable }: Windo
               <button
                 className={styles.minimizeButton}
                 aria-label="Minimize"
-                onClick={() => { void appWindow.minimize(); }}
+                onClick={() => {
+                  void appWindow.minimize();
+                }}
                 type="button"
               />
             )}
@@ -31,14 +38,18 @@ export function WindowFrame({ children, title, minimizable, maximizable }: Windo
               <button
                 className={styles.maximizeButton}
                 aria-label="Maximize"
-                onClick={() => { void appWindow.toggleMaximize(); }}
+                onClick={() => {
+                  void appWindow.toggleMaximize();
+                }}
                 type="button"
               />
             )}
             <button
               className={styles.closeButton}
               aria-label="Close"
-              onClick={() => { void appWindow.close(); }}
+              onClick={() => {
+                void appWindow.close();
+              }}
               type="button"
             />
           </div>

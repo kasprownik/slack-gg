@@ -7,11 +7,14 @@ interface WindowButtonProps {
   onClick?: () => void;
 }
 
-export function WindowButton({ children, size = 'default', onClick }: WindowButtonProps) {
-  const className = [
-    styles.menuItem,
-    size === 'small' ? styles.small : '',
-  ].filter(Boolean).join(' ');
+export function WindowButton({
+  children,
+  size = 'default',
+  onClick,
+}: WindowButtonProps) {
+  const className = [styles.menuItem, size === 'small' ? styles.small : '']
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <button className={className} onClick={onClick} type="button">
