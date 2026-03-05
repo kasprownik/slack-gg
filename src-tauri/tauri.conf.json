@@ -10,11 +10,17 @@
     "frontendDist": "../dist"
   },
   "app": {
+    "macOSPrivateApi": true,
     "windows": [
       {
-        "title": "slack-gg-new",
-        "width": 800,
-        "height": 600
+        "title": "Ja (12345)",
+        "width": 245,
+        "height": 550,
+        "minWidth": 245,
+        "minHeight": 200,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false
       }
     ],
     "security": {
